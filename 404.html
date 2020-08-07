@@ -2,7 +2,7 @@
 <!-- Samuel Brooks 2020 -->
 <!-- 404 GitHub Pages Design Feat. Rick from Rick & Morty -->
 
-
+<link rel="" href="styles.css">
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
@@ -11,34 +11,55 @@
 * {
   font-family: Ubuntu, sans-serif;
 }
-body {
-  background-image: url('https://github.com/LividCoffeee/LividCoffeee.github.io/raw/main-patch/img/Rick.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-     }
-button {
-    background-color: #f96e4d;
-    border: 0;
-    padding: 11px 22px;
-    border-radius: 50px;
-    color: #fff;
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: 900;
-        }
-  
+.large-header {
+   position: relative;
+   width: 100%;
+   background: #111;
+   overflow: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 1;
+}
+
+.demo .large-header {
+   background-image: url("https://github.com/LividCoffeee/LividCoffeee.github.io/raw/main-patch/img/Rick.png");
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+
 @media only screen and (max-width: 768px) {
-  body   {
-            font-size: 3em;
-         }
+   .demo .main-title {
+      font-size: 3em;
+   }
 }
 </style>
 
-<h1 style="font-size:60px; text-align:center">404</h1>
-  <p style="text-align:center;">Looks like youre in the wrong dimension.<br> 
-    Try these coordinates instead: </p>
-    <form>
-         <button type="submit" formaction="https://lividcoffeee.github.io/">Click me</button>
-    </form>
+<div class="container">
+   <div class="content">
+      <div id="large-header" class="large-header">
+         <canvas id="demo-canvas"></canvas>
+         <h1 class="main-title"><span class="thin">404</span></h1>
+      </div>
+   </div>
+</div>
     <!-- <a href="https://lividcoffeee.github.io/" class="button"> C137-Laniakea-MW-Orion-Sol-Terra</a></p> -->
