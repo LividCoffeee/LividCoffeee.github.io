@@ -12,9 +12,23 @@
   				background-attachment: fixed;
   				background-size: cover;
 			}
-			
+			/* Vertical Zoom-n-pan + Greyscale Container */
+			.img-hover-zoom--pan-vertical img {
+  				transition:  transform .5s, filter 1.5s ease-in-out;
+  				transform: scale(1.4);
+				filter: grayscale(100%);
+  				transform-origin: 0 0;
+			}
+
+			/* The Transformation */
+			.img-hover-zoom--pan-vertical:hover img {
+  				transform: scale(1.25) translateY(-30%);
+				filter: grayscale(0);
+			}
+			/*
 			<!-- Background for mobile -->
 			@media (max-width: 480px) {
+				
     		body {
         	background-image: url(images/background-mobile.jpg);
     		}
@@ -31,9 +45,13 @@
 	    		background-image: url(images/background-desktop.jpg);
    			}
 			}
+			*/
 		</style>
 	</head>
 	
-
+	<div class="img-hover-zoom">
+  		<img src="/path/to/image/" alt="This zooms-in really well and smooth">
+	</div>
+	
 </html>
     <!-- <a href="https://lividcoffeee.github.io/" class="button"> C137-Laniakea-MW-Orion-Sol-Terra</a></p> -->
