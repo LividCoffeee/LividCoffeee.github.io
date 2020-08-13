@@ -6,12 +6,14 @@
 <html>
 	<head>
 		<style>
+			/*
 			body {
  	 			background-image: url('https://github.com/LividCoffeee/LividCoffeee.github.io/raw/main-patch/img/Rick.png');
   				background-repeat: no-repeat;
   				background-attachment: fixed;
   				background-size: cover;
 			}
+			*/
 			/* Vertical Zoom-n-pan + Greyscale Container */
 			.img-hover-zoom--pan-vertical img {
   				transition:  transform .5s, filter 1.5s ease-in-out;
@@ -24,6 +26,33 @@
 			.img-hover-zoom--pan-vertical:hover img {
   				transform: scale(1.25) translateY(-30%);
 				filter: grayscale(0);
+			}
+			
+			
+			.banner {
+    		background: url('https://github.com/LividCoffeee/LividCoffeee.github.io/raw/main-patch/img/Rick.png') no-repeat 50% 50%;
+    		background-size: cover;
+    		width: 600px;
+    		height: 372px;
+    		position: relative;
+    		overflow: hidden;
+    		margin: 0 10px;
+			}
+			.overlay {
+    		position: absolute;
+    		top: 0;
+    		z-index: 10;
+				width: 740px;
+    		height: 372px;
+    		background: url('https://github.com/LividCoffeee/LividCoffeee.github.io/raw/main-patch/img/rick-world2.jpg');
+    		transform: skew(200.25deg);
+    		left: 300px;
+			}
+			.banner:hover .overlay {
+    		left: 0;
+    		transform: scale(1.2);
+    		transition:  transform .5s, filter 1.5s ;
+    		filter: grayscale(100%);
 			}
 			/*
 			<!-- Background for mobile -->
@@ -49,9 +78,11 @@
 		</style>
 	</head>
 	
-	<div class="img-hover-zoom">
-  		<img src="/path/to/image/" alt="This zooms-in really well and smooth">
+	<div class="banner">
+    <div class="overlay"></div>
+    <h1>Overlay</h1>
 	</div>
+
 	
 </html>
     <!-- <a href="https://lividcoffeee.github.io/" class="button"> C137-Laniakea-MW-Orion-Sol-Terra</a></p> -->
